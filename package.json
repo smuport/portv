@@ -49,6 +49,8 @@
     "@angular/cli": "8.3.14",
     "@angular/compiler-cli": "^8.2.0",
     "@angular/language-service": "^8.2.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@nrwl/cypress": "8.9.0",
     "@nrwl/jest": "8.9.0",
     "@nrwl/workspace": "8.9.0",
@@ -59,6 +61,7 @@
     "cz-conventional-changelog": "^3.0.2",
     "dotenv": "6.2.0",
     "eslint": "6.1.0",
+    "husky": "^3.1.0",
     "jest": "24.1.0",
     "jest-preset-angular": "7.0.0",
     "ng-packagr": "^5.4.0",
@@ -68,6 +71,16 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "config": {
     "commitizen": {
