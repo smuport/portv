@@ -7,5 +7,30 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "website-e2e": {
+      "tags": []
+    },
+    "website": {
+      "tags": []
+    },
+    "designer-e2e": {
+      "tags": []
+    },
+    "designer": {
+      "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "svg": {
+      "tags": []
+    },
+    "html": {
+      "tags": []
+    },
+    "canvas": {
+      "tags": []
+    }
+  }
 }
