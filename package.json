@@ -25,7 +25,8 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "release": "standard-version"
   },
   "private": true,
   "dependencies": {
@@ -66,6 +67,7 @@
     "jest-preset-angular": "7.0.0",
     "ng-packagr": "^5.4.0",
     "prettier": "1.18.2",
+    "standard-version": "^7.0.1",
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
