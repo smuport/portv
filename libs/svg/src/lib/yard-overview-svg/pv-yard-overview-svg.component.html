@@ -1,0 +1,29 @@
+<svg
+  [attr.width]="viewWidth"
+  [attr.height]="viewHeight"
+  pvRectSelection
+  [rectSelectableData]="displayYards"
+  [enableRectSelection]="enableRectSelection"
+  (rectSelect)="onRectSelect($event)"
+>
+  <g
+    *ngFor="let yard of displayYards; let i = index; trackBy: trackByFn"
+    [attr.transform]="'translate(' + yard.x + ', ' + yard.y + ')'"
+    (click)="onYardClick(yard)"
+  >
+    <ng-container
+      [ngTemplateOutlet]="yardTemplate ? yardTemplate : defaultYardTemplate"
+      [ngTemplateOutletContext]="{ $implicit: yard, index: i }"
+    ></ng-container>
+  </g>
+
+  <!-- <rect #rectSelection width="0" height="0" /> -->
+</svg>
+
+<ng-template #defaultYardTemplate let-yard>
+  <svg:rect
+    [attr.width]="yard.width"
+    [attr.height]="yard.height"
+    [attr.fill]="'red'"
+  ></svg:rect>
+</ng-template>
